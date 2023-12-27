@@ -7,6 +7,7 @@ import drafts from "@metalsmith/drafts";
 import when from "metalsmith-if";
 import htmlMinifier from "metalsmith-html-minifier";
 import assets from "metalsmith-static-files";
+import sass from "@metalsmith/sass";
 
 import config from "./config";
 
@@ -62,6 +63,13 @@ Metalsmith(__dirname)
         })
     )
     .use(layouts(templateConfig))
+    .use(
+        sass({
+            entries: {
+                "src/assets/styles/main.scss": "assets/css/main.css",
+            },
+        })
+    )
     .use(
         assets({
             source: "src/assets/",

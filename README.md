@@ -23,3 +23,7 @@ See the scripts in `package.json` for the available commands, including:
 ## Icons
 
 Generate icons (see the `head.njk` file) at [realfavicongenerator.net](https://realfavicongenerator.net/).
+
+## Plugins
+
+Find more plugins [here](https://metalsmith.io/plugins/).

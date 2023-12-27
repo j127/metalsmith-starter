@@ -1,5 +1,7 @@
 # Metalsmith Starter Template
 
+<mark>This isn't ready for use yet. See the Github issues.</mark>
+
 A basic started template for Metalsmith (static site generator).
 
 ## Development

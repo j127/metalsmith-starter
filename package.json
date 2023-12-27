@@ -1,5 +1,36 @@
 {
     "name": "metalsmith-demo",
-    "version": "0.1.0",
-    "license": "MIT"
+    "version": "0.0.1",
+    "license": "MIT",
+    "scripts": {
+        "format": "prettier --write '**/*.{md,mdx,ts,js,jsx,tsx,yaml,yml,json,html,css,scss}'",
+        "clean": "rimraf build/*",
+        "start": "echo 'TODO: add a live server'",
+        "build": "yarn clean && cross-env NODE_ENV=production bun metalsmith.ts",
+        "deploy": "yarn build && wrangler pages deploy public",
+        "prepare": "husky install"
+    },
+    "lint-staged": {
+        "**/*.{js,jsx,ts,tsx,json,md,mdx,yml,yaml,html,css,scss}": [
+            "yarn format"
+        ]
+    },
+    "devDependencies": {
+        "@metalsmith/collections": "^1.3.0",
+        "@metalsmith/drafts": "^1.3.0",
+        "@metalsmith/layouts": "^2.7.0",
+        "@metalsmith/markdown": "^1.10.0",
+        "@metalsmith/permalinks": "^3.0.0",
+        "@types/node": "^20.10.5",
+        "cross-env": "^7.0.3",
+        "husky": "^8.0.0",
+        "jstransformer-nunjucks": "^1.2.0",
+        "metalsmith": "^2.6.2",
+        "metalsmith-html-minifier": "^4.0.1",
+        "metalsmith-if": "^0.1.1",
+        "metalsmith-static-files": "^0.3.0",
+        "prettier": "^3.1.1",
+        "rimraf": "^5.0.5",
+        "lint-staged": "^15.2.0"
+    }
 }

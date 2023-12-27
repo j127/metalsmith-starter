@@ -1,0 +1,14 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        {% include "partials/head.njk" %}
+    </head>
+    <body class="{{ bodyClass }}">
+        {% include "partials/header.njk" %}
+        <main>
+            {% block body %}{% endblock %}
+        </main>
+        {% include "partials/footer.njk" %}
+        <!-- site build: {{ stats.atime | UTCdate }} -->
+    </body>
+</html>
